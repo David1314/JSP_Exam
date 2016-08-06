@@ -1,0 +1,13 @@
+com\yuxiaoli\daoImpl\FilmDaoImpl.class
+com\yuxiaoli\dao\FilmDao.class
+com\yuxiaoli\service\ShowFilmService.class
+com\yuxiaoli\servlet\LogoutSerlet.class
+com\yuxiaoli\servlet\ShowFilmServlet.class
+com\yuxiaoli\daoImpl\UserDaoImpl.class
+com\yuxiaoli\servlet\LoginServlet.class
+com\yuxiaoli\domain\Film.class
+com\yuxiaoli\domain\Language.class
+com\yuxiaoli\domain\Customer.class
+com\yuxiaoli\service\CheckUserService.class
+com\yuxiaoli\dao\UserDao.class
+com\yuxiaoli\jdbcUtils\ConnectionFactory.class
