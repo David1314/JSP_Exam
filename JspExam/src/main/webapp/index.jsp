@@ -19,11 +19,11 @@
 
 	使用jsp对film的操作：
 	<br/>
-	<a href="list.jsp">显示film列表</a>
+	<a href="<%=request.getContextPath() %>/ShowFilmServlet">显示film列表</a>
 	<br/>
-	<a href="add_film">新增film项</a>
+	<a href="<%=request.getContextPath() %>/ShowLanguageNameServlet">新增film项</a>
 	<br/>
-	<a href="delete_film">删除film项</a>
+	<a href="delete_film.jsp">删除film项</a>
 	<br/><br/><br/>
 	
 	使用html对film列表进行编辑：

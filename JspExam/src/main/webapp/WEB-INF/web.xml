@@ -1,6 +1,4 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
@@ -12,6 +10,35 @@
     <servlet-name>LogoutSerlet</servlet-name>
     <servlet-class>com.yuxiaoli.servlet.LogoutSerlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>ShowFilmServlet</servlet-name>
+    <servlet-class>com.yuxiaoli.servlet.ShowFilmServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowLanguageNameServlet</servlet-name>
+    <servlet-class>com.yuxiaoli.servlet.ShowLanguageNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddFIlmServlet</servlet-name>
+    <servlet-class>com.yuxiaoli.servlet.AddFIlmServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QueryFilmByNameServlet</servlet-name>
+    <servlet-class>com.yuxiaoli.servlet.QueryFilmByNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFilmServlet</servlet-name>
+    <servlet-class>com.yuxiaoli.servlet.DeleteFilmServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QueryLanguageByNameServlet</servlet-name>
+    <servlet-class>com.yuxiaoli.servlet.QueryLanguageByNameServlet</servlet-class>
+  </servlet>
+  
+
+
+
+
 
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
@@ -21,4 +48,60 @@
     <servlet-name>LogoutSerlet</servlet-name>
     <url-pattern>/LogoutSerlet</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowFilmServlet</servlet-name>
+    <url-pattern>/ShowFilmServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowLanguageNameServlet</servlet-name>
+    <url-pattern>/ShowLanguageNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddFIlmServlet</servlet-name>
+    <url-pattern>/AddFilmServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryFilmByNameServlet</servlet-name>
+    <url-pattern>/QueryFilmByNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFilmServlet</servlet-name>
+    <url-pattern>/DeleteFilmServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryLanguageByNameServlet</servlet-name>
+    <url-pattern>/QueryLanguageByNameServlet</url-pattern>
+  </servlet-mapping>
+
+<filter>
+	<filter-name>EncodingFilter</filter-name>
+	<filter-class>com.yuxiaoli.filter.EncodingFilter</filter-class>
+	<init-param>
+		<param-name>encoding</param-name>
+		<param-value>utf-8</param-value>
+	</init-param>
+</filter>
+<filter-mapping>
+	<filter-name>EncodingFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<filter>
+	<filter-name>UserFilter</filter-name>
+	<filter-class>com.yuxiaoli.filter.UserFilter</filter-class>
+</filter>
+
+<filter-mapping>
+	<filter-name>UserFilter</filter-name>
+	<url-pattern>/index.jsp</url-pattern>
+	<url-pattern>/add_Film.jsp</url-pattern>
+	<url-pattern>/list.jsp</url-pattern>
+	<url-pattern>/AddFilmServlet</url-pattern>
+	<url-pattern>/DeleteFilmServlet</url-pattern>
+	<url-pattern>/LoginServlet</url-pattern>
+	<url-pattern>/LogoutServlet</url-pattern>
+	<url-pattern>/QueryLanguageByNameServlet</url-pattern>
+	<url-pattern>/ShowFilmServlet</url-pattern>
+	<url-pattern>/ShowLanguageNameServlet</url-pattern>
+</filter-mapping>
 </web-app>

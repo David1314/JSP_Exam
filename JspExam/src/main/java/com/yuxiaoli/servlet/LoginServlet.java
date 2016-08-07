@@ -37,10 +37,10 @@ public class LoginServlet extends HttpServlet {
 		String name=req.getParameter("username");
 		//System.out.println(name);
 		if(name==null){
-			req.setAttribute("msg",	"ÓÃ»§Ãû»òÕßÃÜÂëÎª¿Õ£¡");
+			req.setAttribute("msg",	"è¯·å…ˆç™»å½•ï¼");
 			req.getRequestDispatcher("login.jsp").forward(req, resp);
 		}else{
-			req.getSession().setAttribute("username", name);
+			
 			Customer user=new Customer();
 			user.setFirst_name(name);
 			System.out.println(user.getFirst_name());
@@ -50,9 +50,10 @@ public class LoginServlet extends HttpServlet {
 			System.out.println("bool="+bool);
 			
 			if(bool){
+				req.getSession().setAttribute("username", name);
 				req.getRequestDispatcher("index.jsp").forward(req, resp);
 			}else{
-				req.setAttribute("msg", "ÓÃ»§ÃûÊäÈë´íÎó£¡");
+				req.setAttribute("msg", "ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯ï¼");
 				req.getRequestDispatcher("login.jsp").forward(req, resp);
 			}
 		}

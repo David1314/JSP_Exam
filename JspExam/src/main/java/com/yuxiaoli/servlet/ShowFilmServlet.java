@@ -2,6 +2,7 @@ package com.yuxiaoli.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -24,21 +25,31 @@ public class ShowFilmServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		resp.setCharacterEncoding("utf-8");
 		doPost(req,resp);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		try {
-			List<Film> filmList=sfs.queryAll();
+		req.setCharacterEncoding("utf-8");
+		resp.setCharacterEncoding("utf-8");
+		
+		
+			List<Film> filmList=new ArrayList<Film>();
+			try {
+				filmList=sfs.queryAll();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			if(filmList!=null){
-				req.setAttribute("list", filmList);
+				req.setAttribute("filmList", filmList);
+//				System.out.println("======");
 				req.getRequestDispatcher("list.jsp").forward(req, resp);
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
 	}
 
 }
