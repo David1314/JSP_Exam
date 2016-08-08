@@ -98,8 +98,8 @@
 	<url-pattern>/list.jsp</url-pattern>
 	<url-pattern>/AddFilmServlet</url-pattern>
 	<url-pattern>/DeleteFilmServlet</url-pattern>
-	<url-pattern>/LoginServlet</url-pattern>
-	<url-pattern>/LogoutServlet</url-pattern>
+	<!-- <url-pattern>/LoginServlet</url-pattern>
+	<url-pattern>/LogoutServlet</url-pattern> -->
 	<url-pattern>/QueryLanguageByNameServlet</url-pattern>
 	<url-pattern>/ShowFilmServlet</url-pattern>
 	<url-pattern>/ShowLanguageNameServlet</url-pattern>

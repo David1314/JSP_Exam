@@ -22,8 +22,8 @@
 	<a href="<%=request.getContextPath() %>/ShowFilmServlet">显示film列表</a>
 	<br/>
 	<a href="<%=request.getContextPath() %>/ShowLanguageNameServlet">新增film项</a>
-	<br/>
-	<a href="delete_film.jsp">删除film项</a>
+<!-- 	<br/>
+	<a href="delete_film.jsp">删除film项</a> -->
 	<br/><br/><br/>
 	
 	使用html对film列表进行编辑：
