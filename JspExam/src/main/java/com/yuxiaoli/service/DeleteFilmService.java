@@ -18,7 +18,7 @@ public class DeleteFilmService {
 			conn.setAutoCommit(false);
 			
 			result = filmDao.deleteFilm(conn, film_id);
-			
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			try {

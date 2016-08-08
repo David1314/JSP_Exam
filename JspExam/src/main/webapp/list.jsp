@@ -9,6 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		Object obj=request.getAttribute("msg");
+	if(obj!=null){
+		out.println(obj.toString());
+	}
+	%>
 	<table border="1" cellspacing="0" cellpadding="5" bordercolor="silver"
 		align="center">
 		<tr>

@@ -19,7 +19,7 @@ public class AddFilmService {
 			conn.setAutoCommit(false);
 			
 			result = filmDao.addFilm(conn, film);
-			
+			conn.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			try {

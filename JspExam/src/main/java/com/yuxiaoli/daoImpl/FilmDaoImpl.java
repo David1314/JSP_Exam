@@ -42,11 +42,14 @@ public class FilmDaoImpl implements FilmDao {
 	}
 
 	public int deleteFilm(Connection conn, int film_id) throws SQLException {
-		PreparedStatement ps=conn.prepareStatement("delete from film where film_id = ?");
-		ps.setInt(1, film_id);
+		PreparedStatement ps=conn.prepareStatement("SET FOREIGN_KEY_CHECKS = 0");
+		ps.execute();
+		PreparedStatement ps1=conn.prepareStatement("delete from film where film_id = ?");
+		ps1.setInt(1, film_id);
 		int result=0;
-		result = ps.executeUpdate();
+		result = ps1.executeUpdate();
 		ps.close();
+		ps1.close();
 		return result;
 	}
 

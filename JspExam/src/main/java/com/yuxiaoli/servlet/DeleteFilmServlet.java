@@ -83,10 +83,10 @@ public class DeleteFilmServlet extends HttpServlet {
 		
 		if(result!=0){
 			request.setAttribute("msg", "删除Film"+film_id+"成功！");
-			request.getRequestDispatcher("list.jsp").forward(request, response);
+			request.getRequestDispatcher("/ShowFilmServlet").forward(request, response);
 		}else{
 			request.setAttribute("msg", "删除Film"+film_id+"失败！");
-			request.getRequestDispatcher("list.jsp").forward(request, response);
+			request.getRequestDispatcher("/ShowFilmServlet").forward(request, response);
 		}
 	}
 
